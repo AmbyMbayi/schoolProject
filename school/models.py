@@ -14,5 +14,5 @@ class Teachers(models.Model):
 
 class Students(models.Model):
     name = models.CharField(max_length=100)
-    admin_no = models.CharField(max_length = 100)
+    admin_no = models.CharField(max_length = 100, unique= True)
     created_at = models.DateTimeField(auto_now_add=True)
