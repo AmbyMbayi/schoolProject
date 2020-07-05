@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Forms from "./Form";
 import Schools from "./Schools";
 export default function Dashboard() {
   return (
-    <div>
+    <Fragment>
       <Forms />
       <Schools />
-    </div>
+    </Fragment>
   );
 }
