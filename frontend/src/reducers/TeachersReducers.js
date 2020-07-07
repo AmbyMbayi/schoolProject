@@ -1,4 +1,4 @@
-import { GET_TEACHERS } from "../actions/types";
+import { GET_TEACHERS, ADD_TEACHER } from "../actions/types";
 
 const initialState = {
   teachers: [],
@@ -10,6 +10,11 @@ export default function (state = initialState, action) {
       return {
         ...state,
         teachers: action.payload,
+      };
+    case ADD_TEACHER:
+      return {
+        ...state,
+        teachers: [...state.teachers, action.payload],
       };
 
     default:
